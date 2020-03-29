@@ -1,5 +1,6 @@
 import {
   Component,
+  Input,
   OnInit,
 } from '@angular/core';
 
@@ -9,6 +10,9 @@ import {
   styleUrls: ['./product-alerts.component.css'],
 })
 export class ProductAlertsComponent implements OnInit {
+
+  @Input()
+  product;
 
   constructor() { }
 
