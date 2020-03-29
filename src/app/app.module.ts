@@ -18,9 +18,9 @@ import { TopBarComponent } from './top-bar/top-bar.component';
   ],
   declarations: [
     AppComponent,
-    TopBarComponent,
-    ProductListComponent,
     ProductAlertsComponent,
+    ProductListComponent,
+    TopBarComponent,
   ],
   bootstrap: [ AppComponent ]
 })
