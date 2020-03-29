@@ -15,6 +15,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
+      { path: 'products/:productId', component: ProductDetailsComponent },
     ]),
   ],
   declarations: [
