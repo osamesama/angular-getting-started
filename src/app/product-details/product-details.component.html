@@ -1,7 +1,10 @@
 <h2>Product Details</h2>
 
-<div *ngIf="product">
+<div *ngIf="product; else invalidProductId">
   <h3>{{ product.name }}</h3>
   <p>{{ product.price | currency }}</p>
   <p>{{ product.description }}</p>
 </div>
+<ng-template #invalidProductId>
+  <p>Invalid product ID.</p>
+</ng-template>
