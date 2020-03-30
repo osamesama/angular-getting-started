@@ -17,6 +17,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
+      { path: 'cart', component: CartComponent },
     ]),
   ],
   declarations: [
