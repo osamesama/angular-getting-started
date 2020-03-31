@@ -21,12 +21,12 @@ interface ShippingCost {
 })
 export class ShippingComponent implements OnInit {
 
-  shippingCosts: Observable<ShippingCost>;
+  shippingPrices: Observable<ShippingCost>;
 
   constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
-    this.shippingCosts = this.cartService.getShippingPrices() as Observable<ShippingCost>;
+    this.shippingPrices = this.cartService.getShippingPrices() as Observable<ShippingCost>;
   }
 
 }
