@@ -2,8 +2,17 @@ import {
   Component,
   OnInit
 } from '@angular/core';
+import { Observable } from 'rxjs';
 
 import { CartService } from '../cart.service';
+
+interface ShippingCost {
+
+  type: string;
+
+  price: number;
+
+}
 
 @Component({
   selector: 'app-shipping',
@@ -12,9 +21,12 @@ import { CartService } from '../cart.service';
 })
 export class ShippingComponent implements OnInit {
 
+  shippingCosts: Observable<ShippingCost>;
+
   constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
+    this.shippingCosts = this.cartService.getShippingPrices() as Observable<ShippingCost>;
   }
 
 }
