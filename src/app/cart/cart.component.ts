@@ -26,6 +26,8 @@ export class CartComponent implements OnInit {
     private formBuilder: FormBuilder,
   ) {
     this.checkoutForm = formBuilder.group({
+      name: '',
+      address: '',
     });
   }
 
