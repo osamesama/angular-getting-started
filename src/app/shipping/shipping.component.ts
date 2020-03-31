@@ -3,6 +3,8 @@ import {
   OnInit
 } from '@angular/core';
 
+import { CartService } from '../cart.service';
+
 @Component({
   selector: 'app-shipping',
   templateUrl: './shipping.component.html',
@@ -10,7 +12,7 @@ import {
 })
 export class ShippingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
   }
