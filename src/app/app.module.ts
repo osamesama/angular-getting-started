@@ -21,6 +21,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
       { path: 'cart', component: CartComponent },
+      { path: 'shipping', component: ShippingComponent },
     ]),
   ],
   declarations: [
