@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 
 import { CartService } from '../cart.service';
 
-interface ShippingCost {
+interface ShippingPrice {
 
   type: string;
 
@@ -21,12 +21,12 @@ interface ShippingCost {
 })
 export class ShippingComponent implements OnInit {
 
-  shippingPrices: Observable<ShippingCost>;
+  shippingPrices: Observable<ShippingPrice>;
 
   constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
-    this.shippingPrices = this.cartService.getShippingPrices() as Observable<ShippingCost>;
+    this.shippingPrices = this.cartService.getShippingPrices() as Observable<ShippingPrice>;
   }
 
 }
